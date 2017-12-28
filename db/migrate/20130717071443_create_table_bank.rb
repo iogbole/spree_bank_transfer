@@ -1,4 +1,4 @@
-class CreateTableBank < ActiveRecord::Migration[5.1.4]
+class CreateTableBank < ActiveRecord::Migration[5.0]
   def change
     create_table :spree_banks do |t|
       t.string :name
