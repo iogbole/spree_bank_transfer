@@ -1,7 +1,7 @@
 <% if bank_transfer_payment = @order.payments.from_bank_transfer.first %>
   <% unless bank_transfer_payment.details_submitted? %>
     <br>
-    <%= link_to Spree.t(:add_bank_transfer_details), "javascript:void(0);", :class => 'btn btn-info' %>
+    <%= link_to Spree.t(:add_bank_transfer_details), "javascript:void(0);", :class => 'btn btn-info add_bt_details' %>
   <% end %>
   <%= form_for bank_transfer_payment, :html => { :class => "bt_payment_form", :style => "#{bank_transfer_payment.details_submitted? ? '' : 'display:none;'}" } do |f| %>
     <table>
